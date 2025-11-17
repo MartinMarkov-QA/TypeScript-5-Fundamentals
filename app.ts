@@ -1,7 +1,5 @@
-let movieTitle: string = 'A new hope';
-console.log(`The movie title is: ${movieTitle}`);
-
-const movieLengthInMinutes: number = 125;
-console.log(`The movie length is: ${movieLengthInMinutes} minutes`);
+let myVar: string | null | undefined = 'Example';
+myVar = null;
+myVar = undefined;
 
 
