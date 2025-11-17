@@ -1,3 +1,7 @@
-let greeting: string = 'Hello!!!';
+let movieTitle: string = 'A new hope';
+console.log(`The movie title is: ${movieTitle}`);
 
-console.log(greeting);
+const movieLengthInMinutes: number = 125;
+console.log(`The movie length is: ${movieLengthInMinutes} minutes`);
+
+
