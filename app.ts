@@ -1,40 +1,15 @@
-console.log('For loop results:');
-
-
-for (let index = 1; index < 10; index++) {
-    if (index % 2 === 0) {
-        console.log(`Number ${index} is even`);
-    }   else {
-        console.log((`Number ${index} is odd`));   
-    }
+// Function with optional parameter 
+function funcWithOptionalPar(name: string, age?: number): void {
+    console.log('Test');
+    
 }
 
-console.log('While loop results:');
-
-let startNumber: number = 1;
-
-while (startNumber < 10) {
-    if (startNumber % 2 === 0) {
-        console.log(`Number ${startNumber} is even`);
-    }   else {
-        console.log((`Number ${startNumber} is odd`));   
-    }
-
-    startNumber++
+// Function with default parameter
+function funcWithDefaultPar(name: 'Default name', age: number): number {
+    return age;
 }
 
-console.log('Switch results:');
-
-let fruit: string = 'Orange';
-
-switch (fruit) {
-    case 'Orange':
-        console.log('The fruit is tropical');
-        break;
-    case 'Apple':
-        console.log('The fruit is not tropical');
-        break;
-    default:
-        console.log('Not known fruit');
-        break;
+// Function with rest parameter
+function funcWithRestParam(name: string, ...favSongs: string[]): void {
+    console.log('Test');
 }
