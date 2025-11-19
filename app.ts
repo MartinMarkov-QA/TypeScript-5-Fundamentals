@@ -1,15 +1,4 @@
-// Function with optional parameter 
-function funcWithOptionalPar(name: string, age?: number): void {
-    console.log('Test');
-    
-}
+// Arrow function
+const greeting = (message: string) => {console.log(message)};
 
-// Function with default parameter
-function funcWithDefaultPar(name: 'Default name', age: number): number {
-    return age;
-}
-
-// Function with rest parameter
-function funcWithRestParam(name: string, ...favSongs: string[]): void {
-    console.log('Test');
-}
+greeting('Hello!!!');
