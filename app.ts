@@ -1,40 +1,16 @@
-// Function Overload 
-const movies = [
-    { movieTitle: 'One', author: 'Jeff', streaming: false },
-    { movieTitle: 'Two', author: 'Alex', streaming: true },
-    { movieTitle: 'Three', author: 'Jeff', streaming: true },
-    { movieTitle: 'Four', author: 'Alex', streaming: false },
-    { movieTitle: 'Five', author: 'Jeff', streaming: true },
-];
+// Function Types
 
-// Function signatures
-function getMoviesTitles(author: string): string[];
-function getMoviesTitles(author: string, streaming: boolean): string[];
+// Function type 
+let idGenerator: (name: string, id: number) => string;
 
-// Function implementation
-function getMoviesTitles(author: string, streaming?: boolean) {
-    let movieTitles: string[] = [];
-
-    if (streaming !== undefined) {
-        for (const movie of movies) {
-            if (movie.author === author && streaming === movie.streaming) {
-                movieTitles.push(movie.movieTitle)
-            }
-        }
-
-    } else {
-        for (const movie of movies) {
-            if (author === movie.author) {
-                movieTitles.push(movie.movieTitle);
-            }
-        }
-    }
-
-    return movieTitles;
+// Function using the same signature as the type above
+function movieIdGenerator(movieName: string, movieId: number): string {
+    return movieName + movieId;
 }
 
-let results: string[] = getMoviesTitles('Jeff', true);
+idGenerator = movieIdGenerator;
 
-for (const result of results) {
-    console.log(result);
-}
+let starWarsId = idGenerator('Star Wars', 17);
+
+console.log(starWarsId);
+
