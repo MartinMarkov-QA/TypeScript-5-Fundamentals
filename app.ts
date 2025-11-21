@@ -1,16 +1,8 @@
-// Function Types
+// Interface
 
-// Function type 
-let idGenerator: (name: string, id: number) => string;
-
-// Function using the same signature as the type above
-function movieIdGenerator(movieName: string, movieId: number): string {
-    return movieName + movieId;
+interface Bird {
+    birdType: string;
+    birdWeight: number;
+    fly: (howItFly: string) => void;
 }
-
-idGenerator = movieIdGenerator;
-
-let starWarsId = idGenerator('Star Wars', 17);
-
-console.log(starWarsId);
 
