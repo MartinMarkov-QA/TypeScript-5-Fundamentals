@@ -6,17 +6,14 @@ interface Bird {
     howToFly(howItFly: string): void;
 }
 
-class Duck implements Bird{
-    birdType = 'Duck';
-    birdWeight = 3.25;
-
-    howToFly(howItFly: string): void {
+let myDuck: Bird = {
+    birdType: "Duck",
+    birdWeight: 3.25,
+    howToFly:  (howItFly: string): void => {
         console.log(howItFly);
     }
-}
+};
 
-let duckOne: Duck = new Duck;
+myDuck.howToFly('MMM');
 
-duckOne.howToFly('I am flying easy');
-console.log(duckOne.birdWeight);
 
