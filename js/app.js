@@ -1,10 +1,10 @@
 "use strict";
 // Interface
 let myDuck = {
-    birdType: "",
-    birdWeight: 0,
+    birdType: "Duck",
+    birdWeight: 3.25,
     howToFly: (howItFly) => {
         console.log(howItFly);
     }
 };
-myDuck.howToFly('MMM');
+myDuck.howToFly('High');

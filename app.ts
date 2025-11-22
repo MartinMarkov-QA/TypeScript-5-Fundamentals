@@ -9,11 +9,11 @@ interface Bird {
 let myDuck: Bird = {
     birdType: "Duck",
     birdWeight: 3.25,
-    howToFly:  (howItFly: string): void => {
+    howToFly:  (howItFly: string) => {
         console.log(howItFly);
     }
 };
 
-myDuck.howToFly('MMM');
+myDuck.howToFly('High');
 
 
