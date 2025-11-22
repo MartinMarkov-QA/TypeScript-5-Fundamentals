@@ -1,10 +1,6 @@
 "use strict";
-// Interface
-let myDuck = {
-    birdType: "Duck",
-    birdWeight: 3.25,
-    howToFly: (howItFly) => {
-        console.log(howItFly);
-    }
+// Interface for function types
+let movieIdGenerator = (movieName, movieNumber) => {
+    return movieName + movieNumber;
 };
-myDuck.howToFly('High');
+console.log(movieIdGenerator('Star Wars', 17));

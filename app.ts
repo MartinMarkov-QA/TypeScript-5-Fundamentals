@@ -1,19 +1,13 @@
-// Interface
+// Interface for function types
 
-interface Bird {
-    birdType: string;
-    birdWeight: number;
-    howToFly(howItFly: string): void;
+interface IdGenerator {
+    (idName: string, idNumber: number): string
 }
 
-let myDuck: Bird = {
-    birdType: "Duck",
-    birdWeight: 3.25,
-    howToFly:  (howItFly: string) => {
-        console.log(howItFly);
-    }
+let movieIdGenerator: IdGenerator = (movieName, movieNumber) => {
+    return movieName + movieNumber;
 };
 
-myDuck.howToFly('High');
+console.log(movieIdGenerator('Star Wars', 17));
 
 
