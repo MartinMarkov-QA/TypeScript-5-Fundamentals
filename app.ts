@@ -1,13 +1,32 @@
-// Interface for function types
+// Interface extending
 
-interface IdGenerator {
-    (idName: string, idNumber: number): string
+interface Machine {
+    factoryNumber: number;
 }
 
-let movieIdGenerator: IdGenerator = (movieName, movieNumber) => {
-    return movieName + movieNumber;
-};
+interface CarType extends Machine {
+    carType: string
+}
 
-console.log(movieIdGenerator('Star Wars', 17));
+interface SportsCar extends CarType {
+    maxSpeed: number;
+    drive: (speed: number) => number; 
+}
+
+let ferrari: SportsCar = {
+    factoryNumber: 17,
+    carType: 'Sport Car',
+    maxSpeed: 189,
+    drive(speed) {
+        return speed;
+    },
+}
+
+console.log(
+    `The car factory number is ${ferrari.factoryNumber}. 
+    The car type is ${ferrari.carType}. 
+    The car max speed is ${ferrari.maxSpeed}.
+    The car is currently driving with ${ferrari.drive(117)} km per hour`
+);
 
 
