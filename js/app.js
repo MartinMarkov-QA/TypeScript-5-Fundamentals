@@ -8,6 +8,9 @@ class Human {
     }
 }
 class Man extends Human {
+    talk() {
+        console.log('I am talking');
+    }
     constructor(manName) {
         super(manName);
         this.manName = manName;
@@ -19,3 +22,4 @@ class Man extends Human {
 }
 let martin = new Man('Martin');
 console.log(martin.walk());
+martin.talk();
