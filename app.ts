@@ -19,12 +19,18 @@ class Human {
     public walk(): void {
         console.log(`The man is walking.`);
     }
+
+    static whatTypeAmI(): void {
+        console.log('I am Human type.');
+        
+    }
 }
 
 let martin: Human = new Human('Man', 'Martin');
 martin.age = 45;
 console.log(martin.age);
 martin.walk();
+Human.whatTypeAmI();
 
 
 
