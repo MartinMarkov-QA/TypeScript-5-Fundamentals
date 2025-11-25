@@ -7,19 +7,14 @@ class Human {
         console.log('The Human is walking');
     }
 }
-class Man extends Human {
+let myClassExpression = class extends Human {
     talk() {
-        console.log('I am talking');
+        console.log('I am Class Expression.');
     }
-    constructor(manName) {
-        super(manName);
-        this.manName = manName;
+    showExpression() {
+        console.log('This is from the Expression Class');
     }
-    walk() {
-        super.walk();
-        return 45;
-    }
-}
-let martin = new Man('Martin');
-console.log(martin.walk());
-martin.talk();
+};
+let myClass = new myClassExpression('Martin');
+myClass.talk();
+myClass.showExpression();

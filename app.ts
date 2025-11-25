@@ -10,23 +10,21 @@ abstract class Human {
     } 
 }
 
-class Man extends Human {
-    talk() {
-        console.log('I am talking');
-    }
-    constructor(private manName: string) {
-        super(manName);
-    }
 
-    public walk(): number {
-        super.walk();
-        return 45;
+
+let myClassExpression = class extends Human {
+    talk(): void {
+        console.log('I am Class Expression.');
+    }
+    public showExpression(): void {
+        console.log('This is from the Expression Class');
+        
     }
 }
 
-let martin = new Man('Martin');
-console.log(martin.walk());
-martin.talk();
+let myClass = new myClassExpression('Martin');
+myClass.talk();
+myClass.showExpression();
 
 
 
