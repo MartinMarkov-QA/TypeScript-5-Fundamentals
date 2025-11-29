@@ -1,6 +1,26 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const functions_1 = require("./util/functions");
-let resultForTwoNumbers = (0, functions_1.sumTwoNumbers)(5, 17);
-console.log(resultForTwoNumbers);
-console.log((0, functions_1.glueStrings)('ABC', 'def'));
+// Promises
+let apiData = ["a", "c", "b"];
+function resProm(data) {
+    let res = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (data.length > 0) {
+                resolve(data);
+            }
+            else {
+                reject("No data found");
+            }
+        }, 2000);
+    });
+    return res;
+}
+;
+console.log('Start!');
+resProm(apiData)
+    .then((data) => {
+    console.log(`The data is ${data} !`);
+})
+    .catch((data) => {
+    console.log(data);
+});
+console.log('End!');
