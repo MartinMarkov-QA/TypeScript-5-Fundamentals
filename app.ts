@@ -1,3 +1,5 @@
+// Promise try catch
+
 let data: number[] = [];
 
 function getData(data: number[]): Promise<number[]> {
