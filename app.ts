@@ -1,45 +1,11 @@
-// Promise try catch
-
-let data: number[] = [];
-
-function getData(data: number[]): Promise<number[]> {
-    return new Promise<number[]>((resolve, reject) => {
-        setTimeout(() => {
-            if (data.length > 0) {
-            resolve(data);
-        } else {
-            reject('No data at this time!');
-        }
-        }, 2000)
-    })
+// TypeScript Generics
+function getFirst<T>(arr: T[]): T {
+    return arr[0];
 }
 
-console.log("Start One!");
+// Implementation
+console.log(getFirst<string>(['A', 'B', 'C'])); // A
 
-getData(data)
-.then((d) => {
-    console.log(`Here is your data: ${data} one!`);
-})
-.catch((d) => {
-    console.log(d);
-    
-})
+console.log(getFirst<number>([1, 2, 3])); // 1
 
-console.log("Finish One!");
-
-console.log("Start Two!");
-
-async function rData(data: number[]): Promise<void> {
-    try {
-        let res = await getData(data);
-        console.log(`Here is your data: ${res} two!`);
-    } catch (err) {
-        console.log(err);
-    }
-}
-
-rData(data);
-
-console.log("Finish Teo!");
-    
-
+console.log(getFirst<number>([1, 'D', 3])); // Compile error 
