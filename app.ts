@@ -1,11 +1,10 @@
-// TypeScript Generics
-function getFirst<T>(arr: T[]): T {
-    return arr[0];
+import * as _ from 'lodash';
+
+// Type declaration files example
+
+let myNames: string[] = ['Martin', 'Mariyana', 'Mitko'];
+
+for (const name of myNames) {
+    console.log(_.toLower(name));
 }
 
-// Implementation
-console.log(getFirst<string>(['A', 'B', 'C'])); // A
-
-console.log(getFirst<number>([1, 2, 3])); // 1
-
-console.log(getFirst<number>([1, 'D', 3])); // Compile error 
